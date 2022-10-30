@@ -193,24 +193,35 @@ const fdoc = {
    }
    }
 
-let mnya = `ıll *INFO BOT* 
-🏷 ▸ Version : 4.4.1
-🗃️ ▸ Lib : Baileys-MD
-🧪 ▸ Mode : ${global.opts['self'] ? 'Self' : 'public'}
-⏰ ▸ Uptime : ${uptime}
-💬 ▸ User : *${Object.keys(global.db.data.users).length}* Pengguna
-🗯 ▸ Chat Ban : *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-🔖 ▸ User Ban : *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+let mnya = `
+┏─「 *SansBot MD* 」  
+│ ▸ Name : ${name}
+│ ▸ Status : ${global.prem ? 'Premium' : 'Free'}
+│ ▸ Limit : ${limit}
+│ ▸ Money : ${money}
+│ ▸ Exp : ${exp}
+│ ▸ Level : ${level}
+│ ▸ Role : ${role}
+┗───────▣
 
-ıll *INFO USER*
-📇 ▸ Name : ${name}
-🆔 ▸ Status : ${global.prem ? 'Premium' : 'Free'}
-🎫 ▸ Limit : ${limit}
-💹 ▸ Money : ${money}
-✨ ▸ Exp : ${exp}
-📊 ▸ Level : ${level}
-📍 ▸ Role : ${role}
-${readMore}`
+┏─「 *Server Info* 」
+│ ▸ Run:  Heroku 
+│ ▸ Database: MongoDB
+│ ▸ Lib: Baileys MD
+│ ▸ Runtime: ${uptime}
+│ ▸ Mode: ${global.opts['self'] ? 'Self' : 'public'}
+│ ▸ User: *${Object.keys(global.db.data.users).length}* Pengguna
+│ ▸ Chat Ban: *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+│ ▸ User Ban: *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+┗───────▣
+
+┏─「 *Rules* 」
+│ ▸ Don't Spam
+│ ▸ Don't Call
+│ ▸ Don't Send 18+
+│ ▸ Don't Send Virtext
+┗───────▣
+`
 
 	
     let groups = {}
@@ -270,8 +281,7 @@ ${readMore}`
 //const _0x5313da=_0x5833;(function(_0x260e43,_0x257ab4){const _0x503b1e=_0x5833,_0xd87a13=_0x260e43();while(!![]){try{const _0x3c8b40=parseInt(_0x503b1e(0x1da))/0x1*(parseInt(_0x503b1e(0x1c9))/0x2)+-parseInt(_0x503b1e(0x1ca))/0x3*(-parseInt(_0x503b1e(0x1cb))/0x4)+parseInt(_0x503b1e(0x1d1))/0x5+-parseInt(_0x503b1e(0x1ce))/0x6*(parseInt(_0x503b1e(0x1d3))/0x7)+-parseInt(_0x503b1e(0x1d9))/0x8*(-parseInt(_0x503b1e(0x1d4))/0x9)+parseInt(_0x503b1e(0x1d7))/0xa+-parseInt(_0x503b1e(0x1d2))/0xb;if(_0x3c8b40===_0x257ab4)break;else _0xd87a13['push'](_0xd87a13['shift']());}catch(_0x2e86ae){_0xd87a13['push'](_0xd87a13['shift']());}}}(_0xac0b,0x9a270));const buttonMessage={'document':{'url':gc},'mimetype':global[_0x5313da(0x1cc)],'fileName':''+ucapan(),'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'forwardingScore':0x22b,'isForwarded':![],'externalAdReply':{'showAdAttribution':!![],'mediaUrl':global['instagram'],'mediaType':0x2,'previewType':_0x5313da(0x1d6),'title':tb,'body':wm2,'thumbnail':await(await fetch(media))[_0x5313da(0x1c8)](),'sourceUrl':gc}},'caption':text,'footer':wm,'buttons':[{'buttonId':'.donasi','buttonText':{'displayText':_0x5313da(0x1cd)},'type':0x1},{'buttonId':_0x5313da(0x1cf),'buttonText':{'displayText':_0x5313da(0x1d5)},'type':0x1}],'headerType':0x6};function _0x5833(_0x2462fe,_0x5b86f1){const _0xac0b7e=_0xac0b();return _0x5833=function(_0x58334e,_0xde8e5d){_0x58334e=_0x58334e-0x1c8;let _0x19f059=_0xac0b7e[_0x58334e];return _0x19f059;},_0x5833(_0x2462fe,_0x5b86f1);}await conn[_0x5313da(0x1d0)](m[_0x5313da(0x1d8)],buttonMessage,{'quoted':m});function _0xac0b(){const _0x146b4b=['42FVQhCm','3YOVjEg','4001436ZAnWDJ','ddocx','Donasi','150gycguR','.owner','sendMessage','3334420XygTyH','32703748UQMNeS','6713HuAlrz','13410KnLwWm','Owner','pdf','10421530PjPRjj','chat','80dZDWSf','43055rzNNec','buffer'];_0xac0b=function(){return _0x146b4b;};return _0xac0b();}
 	
 
-await conn.send3ButtonImg(m.chat, media, mnya, text.trim(), `Donasi`, `${_p}donasi`, `Owner`, `${_p}owner`, `Speed`, `${_p}speed`, m,
-      quoted: ftroli,})
+await conn.send3ButtonImg(m.chat, ftroli, imgloc, mnya, text.trim(), `Donasi`, `${_p}donasi`, `Owner`, `${_p}owner`, m)
 
 } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
@@ -280,7 +290,7 @@ await conn.send3ButtonImg(m.chat, media, mnya, text.trim(), `Donasi`, `${_p}dona
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(m|menu|help|\?)$/i
+handler.command = /^(menu|help|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

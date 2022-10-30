@@ -271,7 +271,7 @@ ${readMore}`
 	
 
 await conn.send3ButtonImg(m.chat, imgloc, mnya, text.trim(), `Donasi`, `${_p}donasi`, `Owner`, `${_p}owner`, `Speed`, `${_p}speed`, m,
-quoted: ftroli})
+quoted: ftroli, })
 
 } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
